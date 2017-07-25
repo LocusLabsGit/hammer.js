@@ -1,7 +1,7 @@
-/*! Hammer.JS - v2.0.7 - 2016-04-22
+/*! Hammer.JS - v2.0.8 - 2017-07-24
  * http://hammerjs.github.io/
  *
- * Copyright (c) 2016 Jorik Tangelder;
+ * Copyright (c) 2017 Jorik Tangelder;
  * Licensed under the MIT license */
 (function(window, document, exportName, undefined) {
   'use strict';
@@ -759,7 +759,7 @@ function getAngle(p1, p2, props) {
  * @return {Number} rotation
  */
 function getRotation(start, end) {
-    return getAngle(end[1], end[0], PROPS_CLIENT_XY) + getAngle(start[1], start[0], PROPS_CLIENT_XY);
+    return getAngle(end[1], end[0], PROPS_CLIENT_XY) - getAngle(start[1], start[0], PROPS_CLIENT_XY);
 }
 
 /**
@@ -2145,7 +2145,7 @@ function Hammer(element, options) {
 /**
  * @const {string}
  */
-Hammer.VERSION = '2.0.7';
+Hammer.VERSION = '2.0.8';
 
 /**
  * default settings
